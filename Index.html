@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">Gabriel Rodríguez</h1>
+        <nav class="headertop">
+            <ul class="buttons-top">
+                <li><a href="#sobremi">Sobre mí</a></li>
+                <li><a href="">Lenguajes</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="main-sobre-mi">
+            <h2 id="Sobremi" class="Mi-Nombre">Gabriel Lautaro Rodríguez López</h2>
+            <article class="Descripcionmia">
+                
+                <section class="about-text">
+                    <article class="texto">
+                        <div class="textmi">
+                            <h3>Sobre mi:</h3>
+                            <p> Hola, soy Gabriel Rodríguez, soy programador especializado en varios lenguajes, aunque mi fuerte es programar en front y DB en SQL y NoSQL.</p>
+                            <p>Actualmente soy estudiante de la tecnicatura en programación de la UTN, pero me encataría empezar a ejercer de programador para una empresa. Soy una persona con pensamiento autocrítico, mucha versatilidad y con un buen trabajo en equipo.</p>
+                        </div>
+                        <div class="Curriculum">
+                            <h3>Curriculum vitae:</h3>
+                            <p>A continuación les dejo mi CV para que lo puedan descargar y ver.</p>
+                            <a href="CV_Gabriel_Rodriguez.pdf" download><img src="Icono-descarga.png" alt="Icono-descarga" class="icono-descarga"></a>
+                        </div>
+                     </article>
+                    <img src="foto.jpg" alt="Foto de Gabriel" class="Foto">
+                         <div class="Curriculumtelefono">
+                            <h3>Curriculum vitae:</h3>
+                            <p>A continuación les dejo mi CV para que lo puedan descargar y ver.</p>
+                            <a href="CV_Gabriel_Rodriguez.pdf" download><img src="Icono-descarga.png" alt="Icono-descarga" class="icono-descarga"></a>
+                    </div>
+                </section>
+              
+            </article>
+           
+        </section>
+        <hr>
+        <section class="lenguajes">
+            <article>
+                <h3>Lenguajes de programación:</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>C++</li>
+                    <li>SQL</li>
+                    <li>NoSQL</li>
+                </ul>
+            </article>
+        </section>
+        <hr>
+        <section>
+            <h3>Proyectos</h3>
+            <p>Acá se ven de forma rápida algunos proyectos, pero si le interesa ver más de mis proyectos al final le proporciono el link de mi portafolio de GitHub.</p>
+            <article>
+                <h4>Proyecto 1: Sitio web personal</h4>
+                <img src="" alt="Foto-proyecto-1">
+                <p>Descripción del proyecto 1...</p>
+            </article>
+            <article>
+                <h4>Proyecto 2: Aplicación de gestión de tareas</h4>
+                <img src="" alt="Foto-proyecto-2">
+                <p>Descripción del proyecto 2...</p>
+            </article>
+            <a href="https://github.com/gabrielrodriguez" target="_blank">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Logo GitHub" width="40" height="40">
+            </a>
+        </section>
+        <hr>
+        <section>
+            <h3 id="Contacto">Contacto</h3>
+            <form action="Enviar" method="post">
+                <label for="name">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej: Gabriel Rodriguez" required>
+                <label for="telefono">Número</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ej: +54 9 11 1234 5678" required>
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="Ej: ejemplo@gmail.com" required>
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                <button type="submit">Enviar</button>
+
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Gabriel Rodríguez</p>
+        <a href="https://www.linkedin.com/in/gabriel-rodriguez-lopez-bb8696279/" target="_blank">
+        <img src="https://www.pngall.com/wp-content/uploads/18/Minimalist-Linkedin-Logo-Black-Icon-PNG.png" alt="Logo GitHub" width="40" height="40">
+        </a>
+    </footer>
+</body>
+</html>
