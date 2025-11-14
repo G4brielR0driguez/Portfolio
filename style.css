@@ -6,7 +6,8 @@
         --backcolorboton: #F9C181; /* color del boton de descarga CV*/
         --backcolorbotonhover: #f9c181; /* color del boton de descarga CV*/
         --backhoverboton: #ffffffcb; /* color del boton de header */
-        --lineacontornoboton: #594E3B; /* color del contorno del boton de descarga CV*/
+        --lineacontornoboton: #594E3BAA ; /* color del contorno del boton de descarga CV*/
+        --background-tarjetas: #CDA76B ; /* color de fondo de las tarjetas */
     }
     *{
         margin: 0;
@@ -24,7 +25,14 @@
         border: 1px solid black;
         margin: 1rem 0;
     }
-
+    body h3{
+            font-size: 1.5em;
+    }
+    body p{
+        margin-left: 1rem;
+        margin-top: 1rem;
+        font-size: 1.3rem;
+    }
     /* estilos header y sus botones*/
 
     header {
@@ -67,14 +75,6 @@
     width: 100%;
 }
 
-.main-sobre-mi p {
-   margin-left: 1rem;
-   margin-top: 0.5rem;
-   font-size: 1.3rem;
-}
-.main-sobre-mi h3{
-    font-size: 1.5em;
-}
 .Mi-Nombre {
     font-size: 2em;
     margin-bottom: 1rem;
@@ -151,12 +151,13 @@
 
 .headertop a:hover {
     transition-duration: 10ms;
-     cursor: pointer;
-   font-size: 1.3rem;
+    cursor: pointer;
+    font-size: 1.3rem;
     font-weight: bold;
     color: var(--backhoverboton);
     background-color: rgb(255, 255, 255,0.1);
     border-radius: 0.3rem;
+    padding: 0.5rem;
 }
 
 .icono-descarga:hover {
@@ -194,8 +195,8 @@
     .Foto{
         margin-right: auto;
         margin-left: auto;
-        width: 15rem;
-        height: 15rem;
+        width: 17rem;
+        height: 17rem;
     }
     .about-text {
        flex-direction: column;
@@ -237,7 +238,156 @@
 
 /* Secion de lenguajes de programacion */
 
-.lenguaje, .cap1-lenguaje {
-
+.lenguajes, .cap1-lenguaje {
     width: 100%;
+    margin: 3rem 0;
+}
+
+.cap1-lenguaje {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.cap1-lenguaje h3 {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+.cap1-lenguaje ul,li{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Formato adaptativo para lenguajes de programacion en telefono */
+
+@media (max-width: 1024px) {
+    .cap1-lenguaje ul,li{
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+}
+
+/* Estilos proyectos */
+    /* Titulo proyectos */
+.box-proyectos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box-proyectos h4{
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 1.3rem;
+}
+.box-tarjetas-proyectos p{
+    margin-bottom: 1rem;
+}
+.titulo-box-proyecto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+    /* 
+    *
+    Tarjetas de proyectos 
+    *
+    */
+
+.box-tarjetas-proyectos {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: var(--background-tarjetas);
+    padding: 1rem;
+    margin: 1rem;
+    width: 20rem;
+    text-align: center;
+}
+.tarjeta a{
+    border-radius: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+        /* 
+        *
+        Iconos y fotos de las tarjetas 
+        *
+        */
+
+.icono-descarga-tarjeta {
+    display: flex;
+    width: 3rem;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.747);
+    border-radius: 0.8rem;
+    border: 1px solid var(--lineacontornoboton);
+    
+}
+        
+.fotos-proyectos {
+    width: 80%;
+    height: auto;
+    padding: 0.6rem;
+    
+}
+
+        /*
+        *
+        Link de github e icono
+        *
+        */
+
+.link-github {
+    border-radius: 3em;
+    margin-top: 1rem;
+}
+
+.icono-github {
+    display: flex;
+    border-radius: 2em;
+    border: 1px solid rgb(from var(--lineacontornoboton) r g b / 40%);
+    background-color: rgb(from var(--background-tarjetas) r g b / 20%);
+    width: 6rem;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+
+/* Formato adaptativo para tarjetas de proyectos en telefono */
+@media (max-width: 1024px) {
+    .box-tarjetas-proyectos{
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+
+
+
+
+
+footer{
+    display: none;
 }
