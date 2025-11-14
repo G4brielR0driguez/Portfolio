@@ -8,15 +8,24 @@
         --backhoverboton: #ffffffcb; /* color del boton de header */
         --lineacontornoboton: #594E3BAA ; /* color del contorno del boton de descarga CV*/
         --background-tarjetas: #CDA76B ; /* color de fondo de las tarjetas */
+        --background-tarjeta-contacto: #C4B08F ; /* color de fondo de la tarjeta de contacto */
+        --background-input-contacto: #D5D5D5 ; /* color de fondo de los input de contacto */
+        --background-boton-contacto: #2C2C2C; /* color de fondo de boton de contacto */
+        --background-footer: #604F38; /*color del fondo de footer */
     }
     *{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
-    body, html, main {
+    body, html {
         width: 100%;
-        height: 100vh;
+        height: 100%;
+    }
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
         background-color: var(--backcolor);
     }
 
@@ -26,16 +35,18 @@
         margin: 1rem 0;
     }
     body h3{
-            font-size: 1.5em;
+            font-size: 1.5rem;
     }
     body p{
         margin-left: 1rem;
         margin-top: 1rem;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
     /* estilos header y sus botones*/
 
     header {
+        position: sticky;
+        top: 0;
         width: 100%;   
         background-color: var(--backheadercolor);
         display: flex;
@@ -53,6 +64,7 @@
     }
 
     .headertop a {
+        display: flex;
         text-decoration: none;
         color: white;
         font-size: 1.2em;
@@ -147,6 +159,9 @@
 .Curriculumtelefono{
     display: none;
 }
+.display-button{
+    display: none;
+}
 /* Efectos hover de los botones del header y del icono de descarga */
 
 .headertop a:hover {
@@ -176,6 +191,23 @@
     header{
         width: 100%;
     }
+    .display-button{
+        display: block;
+          display: flex;
+        align-items: center;
+         margin-left: auto;
+    }
+    .display-hamburguesa{
+        display: flex;
+          margin: 0 1rem;
+    }
+    .icono-hamburguesa{
+        display: flex;
+        width: 1.5rem;
+        height: auto;
+      
+    }
+
     /* Estilos de la primera parte "Sobre mi" */
         /* Hidden del otro apartado de curriculum*/
    
@@ -260,7 +292,7 @@
     flex-direction: row;
     margin-left: 2rem;
     margin-bottom: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 /* Formato adaptativo para lenguajes de programacion en telefono */
@@ -319,6 +351,7 @@
     border: 1px solid black;
     border-radius: 10px;
     background-color: var(--background-tarjetas);
+    box-shadow: 2px 4px 4px rgb(0, 0, 0,0.25);
     padding: 1rem;
     margin: 1rem;
     width: 20rem;
@@ -359,7 +392,7 @@
         */
 
 .link-github {
-    border-radius: 3em;
+    border-radius: 2rem;
     margin-top: 1rem;
 }
 
@@ -368,6 +401,7 @@
     border-radius: 2em;
     border: 1px solid rgb(from var(--lineacontornoboton) r g b / 40%);
     background-color: rgb(from var(--background-tarjetas) r g b / 20%);
+    box-shadow: 1px 4px 4px rgb(0, 0, 0,0.25);
     width: 6rem;
     height: auto;
     margin-bottom: 1rem;
@@ -383,11 +417,88 @@
     }
 }
 
+/*Estilo de contacto*/
+    .Contacto-main-box {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+         align-items: center;
+         margin-bottom: 2rem;
+    }
+      .Contacto-main-box form {
+        display: flex;
+       width: 100%;
+       justify-content: center;
+    }
+    .Contacto-main-box h3{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0;
+        margin-bottom: 2rem;
+    }
+    .tarjeta-contacto{
+      display: flex;
+      flex-direction: column;
+        background-color: var(--background-tarjeta-contacto);
+        box-shadow: 1px 4px 4px rgb(0, 0, 0,0.25);
+        border-radius: 0.4rem;
+        width: 30%;
+        height: auto;
+        padding: 1.5%;
+        gap: 0.5rem;
+    }
+    .tarjeta-contacto input, textarea, label{
+        display: flex;
+        font-size: large;
+        padding: 2%;
+        margin: 0.3rem 0;
+    }
+    .tarjeta-contacto input, textarea {
+        border-radius: 0.8rem;
+        border: none;
+        background-color: var(--background-input-contacto);
+    }
+    .tarjeta-contacto button{
+        margin-top: 1.5rem;
+        padding: 0.8rem;
+        background-color: var(--background-boton-contacto);
+        border: none;
+        border-radius: 0.5rem;
+        color: white;
+    }
+
+@media(max-width: 1024px){
+.tarjeta-contacto{
+      display: flex;
+      flex-direction: column;
+        width: 70%;
+        height: auto;
+        gap: 0.5rem;
+    }
+}
 
 
 
 
 
-footer{
-    display: none;
+/* Estilos footer */
+
+.foot-hitbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem;
+    gap: 1.5rem;
+    background-color: var(--background-footer);
+}
+.foot-hitbox p{
+    display: flex;
+    margin: 0.8rem 0 ;
+    color: white;
+}
+.icono-linkedin{
+    display: flex;
+    width: 1.4rem;
+    height: auto;
 }

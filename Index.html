@@ -13,15 +13,20 @@
         <nav class="headertop">
             <ul class="buttons-top">
                 <li><a href="#sobremi">Sobre mí</a></li>
-                <li><a href="">Lenguajes</a></li>
-                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#lenguajes">Lenguajes</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#Contacto">Contacto</a></li>
             </ul>
         </nav>
+        <div class="display-button">
+            <a class="display-hamburguesa" href="">
+                <img src="icono-hamburguesa.png" alt="icono-hamburguesa" class="icono-hamburguesa">
+            </a>
+            </div>
     </header>
     <main>
         <section class="main-sobre-mi">
-            <h2 id="Sobremi" class="Mi-Nombre">Gabriel Lautaro Rodríguez López</h2>
+            <h2 id="sobremi" class="Mi-Nombre">Gabriel Lautaro Rodríguez López</h2>
             <article class="Descripcionmia">
                 
                 <section class="about-text">
@@ -51,7 +56,7 @@
         <hr>
         <section class="lenguajes">
             <article class="cap1-lenguaje">
-                <h3>Lenguajes de programación</h3>
+                <h3 id="lenguajes">Lenguajes de programación</h3>
                 <ul>
                     <li>HTML5</li>
                     <li>CSS3</li>
@@ -67,7 +72,7 @@
         <hr>
         <section class="box-proyectos">
             <article class="titulo-box-proyecto">
-                <h3>Proyectos</h3>
+                <h3 id="proyectos">Proyectos</h3>
                 <p>Acá se ven de forma rápida algunos proyectos, pero si le interesa ver más de mis proyectos al final le proporciono el link de mi portafolio de GitHub.</p>
             </article>
             <div class="box-tarjetas-proyectos">
@@ -85,13 +90,15 @@
             </article>
             </div>
              <a href="https://github.com/gabrielrodriguez" target="_blank" class="link-github">
+                
                 <img src="GitHub-Logo.png" alt="Logo GitHub" class="icono-github">
             </a>
         </section>
         <hr>
-        <section>
+        <section class="Contacto-main-box">
             <h3 id="Contacto">Contacto</h3>
             <form action="Enviar" method="post">
+                <div class="tarjeta-contacto">
                 <label for="name">Nombre</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Ej: Gabriel Rodriguez" required>
                 <label for="telefono">Número</label>
@@ -101,15 +108,17 @@
                 <label for="mensaje">Mensaje</label>
                 <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
                 <button type="submit">Enviar</button>
-
+                </div>
             </form>
         </section>
     </main>
     <footer>
+        <article class="foot-hitbox">
         <p>© 2025 Gabriel Rodríguez</p>
         <a href="https://www.linkedin.com/in/gabriel-rodriguez-lopez-bb8696279/" target="_blank">
-        <img src="https://www.pngall.com/wp-content/uploads/18/Minimalist-Linkedin-Logo-Black-Icon-PNG.png" alt="Logo GitHub" width="40" height="40">
+        <img src="Icon-linledin.png" alt="Icono linkedin" class="icono-linkedin">
         </a>
+        </article>
     </footer>
 </body>
 </html>
