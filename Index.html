@@ -28,7 +28,7 @@
         
     <section class="sidebar">
         <nav class="sidetop">
-            <ul class="buttons-side">
+            <ul class="buttons-side" id="botones-sidebar">
                 <li><a href="#sobremi">Sobre mí</a></li>
                 <li><a href="#lenguajes">Lenguajes</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
@@ -37,8 +37,8 @@
          </nav>
     </section>
     <main>
-        <section class="main-sobre-mi">
-            <h2 id="sobremi" class="Mi-Nombre">Gabriel Lautaro Rodríguez López</h2>
+        <section class="main-sobre-mi" id="sobremi">
+            <h2 id="" class="Mi-Nombre">Gabriel Lautaro Rodríguez López</h2>
             <article class="Descripcionmia">
                 
                 <section class="about-text">
@@ -66,9 +66,9 @@
            
         </section>
         <hr>
-        <section class="lenguajes">
+        <section class="lenguajes" id="lenguajes">
             <article class="cap1-lenguaje">
-                <h3 id="lenguajes">Lenguajes de programación</h3>
+                <h3 >Lenguajes de programación</h3>
                 <ul>
                     <li>HTML5</li>
                     <li>CSS3</li>
@@ -82,9 +82,9 @@
             </article>
         </section>
         <hr>
-        <section class="box-proyectos">
+        <section class="box-proyectos" id="proyectos">
             <article class="titulo-box-proyecto">
-                <h3 id="proyectos">Proyectos</h3>
+                <h3>Proyectos</h3>
                 <p>Acá se ven de forma rápida algunos proyectos, pero si le interesa ver más de mis proyectos al final le proporciono el link de mi portafolio de GitHub.</p>
             </article>
             <div class="box-tarjetas-proyectos">
@@ -107,14 +107,14 @@
             </a>
         </section>
         <hr>
-        <section class="Contacto-main-box">
-            <h3 id="Contacto">Contacto</h3>
-            <form action="Enviar" method="post">
+        <section class="Contacto-main-box" id="Contacto">
+            <h3>Contacto</h3>
+            <form action="https://formspree.io/f/xqawlgon" method="post">
                 <div class="tarjeta-contacto">
                 <label for="name">Nombre</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Ej: Gabriel Rodriguez" required>
                 <label for="telefono">Número</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="Ej: +54 9 11 1234 5678" required>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ej: +54 9 11 1234 5678" required    oninput="this.value = this.value.replace(/[^0-9+\-\s()]/g, '')">
                 <label for="email">Correo electrónico</label>
                 <input type="email" id="email" name="email" placeholder="Ej: ejemplo@gmail.com" required>
                 <label for="mensaje">Mensaje</label>

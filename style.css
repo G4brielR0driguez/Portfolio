@@ -2,12 +2,12 @@
 
     :root{
         --backcolor: #F3E2CA;  /* color de fondo general */
-        --backheadercolor: #AF946E; /* color de fondo del header */
+        --backheadercolor: #af946efb; /* color de fondo del header */
         --backcolorboton: #F9C181; /* color del boton de descarga CV*/
         --backcolorbotonhover: #f9c181; /* color del boton de descarga CV*/
         --backhoverboton: #ffffffcb; /* color del boton de header */
         --lineacontornoboton: #594E3BAA ; /* color del contorno del boton de descarga CV*/
-        --background-tarjetas: #CDA76B ; /* color de fondo de las tarjetas */
+        --background-tarjetas: #c2a16daf ; /* color de fondo de las tarjetas */
         --background-tarjeta-contacto: #C4B08F ; /* color de fondo de la tarjeta de contacto */
         --background-input-contacto: #D5D5D5 ; /* color de fondo de los input de contacto */
         --background-boton-contacto: #2C2C2C; /* color de fondo de boton de contacto */
@@ -20,13 +20,31 @@
     }
     body, html {
         width: 100%;
-        height: 100%;
+        scroll-behavior: smooth;
+       overflow-x: clip;
+    }
+    section{
+        scroll-margin-top: 200px;
+        scroll-snap-align: start;
     }
     body {
-      
-        display: flex;
-        flex-direction: column;
-        background-color: var(--backcolor);
+    
+        background: url("fondo.jpg") no-repeat center fixed;
+        background-size:cover ;
+
+    }
+    
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2); 
+          backdrop-filter: blur(10px);
+        pointer-events: none;
+        z-index: -1; 
     }
 
     hr {
@@ -50,6 +68,8 @@
         width: 100%;   
         background-color: var(--backheadercolor);
         display: flex;
+        box-shadow: 0px 3px 2px 1px rgb(0, 0, 0,0.20);
+        z-index: 1;
     }
     header h1 {
         margin: 0.5rem;
@@ -394,7 +414,7 @@
     display: flex;
     border-radius: 2em;
     border: 1px solid rgb(from var(--lineacontornoboton) r g b / 40%);
-    background-color: rgb(from var(--background-tarjetas) r g b / 20%);
+    background-color: rgb(from var(--background-tarjetas) r g b / 60%);
    box-shadow: 0px 1px 2px rgb(0, 0, 0,0.25);
     width: 6rem;
     height: auto;
@@ -415,6 +435,13 @@
     height: auto;
     background-color: rgba(228, 226, 226, 0.747);
      box-shadow: 0px 4px 4px rgb(0, 0, 0,0.25);
+
+}
+
+.tarjeta:hover{
+    transform: scale(2);
+    transform: translateY(-4px);
+    box-shadow: 0px 4px 4px rgb(0, 0, 0,0.25);
 }
 /* Formato adaptativo para tarjetas de proyectos en telefono */
 @media (max-width: 1024px) {
@@ -519,13 +546,20 @@
 /* creacion de la side bar para telefono */
 
 .sidebar{
-    display: none;
     position: fixed;
     right: 0;
+    top: 0;
     height: 100%;
     width: 35%;
     background-color: var(--backheadercolor);
     box-shadow: -2rem 0px 2rem 1rem rgba(0, 0, 0, 0.25);
+    z-index: 2;    
+    transform: translateX(120%);
+    transition: transform 0.8s cubic-bezier(.25, .8, .25, 1);
+
+}
+.sidebar.active {
+    transform: translateX(0);
 }
 .sidetop a {
     display: flex;
@@ -544,27 +578,25 @@
 }
 .sidetop li {
      width: 100%;
-
 }
 .sidetop{
     display: flex;
     width: 100%;
-    height: 100%;
 }
 .buttons-side{
     width: 100%;
-    height: 100%;
     list-style: none;
-     display: flex;
+    display: flex;
     flex-direction: column;
     align-items:center;
+    margin-top: 1rem;
 }
 .difuminacion{
     display: none;
     position: fixed;
     top: 0;
     left: 0;
-    width: 65%;
+    width: 100%;
     height: 100%;
     backdrop-filter: blur(5px);
     background: rgba(0, 0, 0, 0.6);
@@ -573,6 +605,7 @@
 .display-hamburguesa{
     display: none;
 }
+
 
 @media (max-width: 1024px) {
      .display-hamburguesa{
