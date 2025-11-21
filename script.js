@@ -26,10 +26,10 @@ if(openside && difuminadorback){
     }
   }
 
-  buttonsside.onclick = () =>{
-    sidebar.classList.remove("active");
-    difuminadorback.style.display = "none";
-  }
+    buttonsside.onclick = () =>{
+      sidebar.classList.remove("active");
+      difuminadorback.style.display = "none";
+    }
   function updateDisplay(e) {
     if (e.matches) {
         sidebar.classList.remove("active");
